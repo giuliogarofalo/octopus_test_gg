@@ -1,4 +1,184 @@
+$light-blue: #01193b;
+$dark-blue: #050f2a;
+
+.app-container {
+  max-width: 700px;
+}
+#root {
+  background-color: $light-blue ;
+}
+
 body {
   font-family: 'Gotham',helvetica,arial,sans-serif;
   margin: 0;
+}
+
+.section {
+  &-darker {
+    background-color: #050f2a;
+  }
+  &-lighter {
+    background-color: $light-blue;
+  }
+}
+
+h1,h2,h3,h4,h5,h6,p,span {
+  color: #fff;
+}
+button {
+  color: #fff !important;
+}
+
+.navbar {
+  height: 55px;
+
+  .octo_logo {
+    svg {
+      max-height: 30px !important;
+      max-width: 130px;
+    }
+  }
+  .cart {
+  svg {
+    max-height: 20px !important;
+  }
+  }
+}
+.product-image-container {
+  width: 90%;
+  .product_image {
+    object-fit: contain;
+  }
+}
+
+.product-name {
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: 2px;
+} 
+.product-description {
+  color: #34578c;
+  font-size: 14px;
+}
+
+.light-blue-text {
+  color: #5365ab
+}
+
+.less-button {
+  width: 2rem;
+  height: 2rem;
+  background-color: #1d223a; 
+  border: none;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10%;
+}
+
+.plus-button {
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  background-color: #3a4880; 
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10%;
+
+}
+
+.product-price-number {
+  font-size: 30px;
+  font-weight: 900;
+  display: inline-flex;
+  &-decimals {
+    font-size: 18px;
+    line-height: 36px;
+  }
+}
+
+.details {
+  &-title {
+    font-size: 24px;
+    font-weight: 900;
+  }
+  &-body {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.details-body {
+  p {
+    font-size: 15px;
+  }
+}
+
+.footer {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.footer-text {
+
+  color: rgb(193, 193, 255);
+}
+
+.product-quantity {
+  font-size: 24px;
+
+  font-weight: 900;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 
+}
+
+.card {
+  h5,p {
+    color: #000;
+  }
+  .card-text {
+    white-space: nowrap; 
+    width: 250px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+}
+
+.add-to-cart {
+  width: 100%;
+  font-size: 23px;
+  width: 100%;
+  height: 45px;
+  line-height: 20px;
+  backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background: linear-gradient(180deg,#ff6bae 0%,#ff6bae 47.78761061946903%,#ea0065 50.93411996066863%,#fb1a7b 30%);
+  border-radius: 2px;
+  border: 1px solid #ff6bae;
+  border-width: 1px 1px 1px 1px;
+  padding: 10px 20px 10px 20px;
+  color: #fff;
+  font-family: Helvetica Neue;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+.basket {
+  width: 4rem;
+  position: relative;
+  .cart-total {
+    text-align: center;
+    position: absolute;
+    right: 20px;
+    top: 4px;
+    font-size: .8rem;
+  }
 }

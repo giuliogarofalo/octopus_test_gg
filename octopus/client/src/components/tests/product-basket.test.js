@@ -4,7 +4,6 @@ import Header from '../header'
 import ProductDetail from '../ProductDetail'
 import { waitFor } from '@testing-library/react'
 
-
 const mockProduct = {
     product: {
         id: '1',
@@ -29,19 +28,21 @@ describe('Basket', () => {
     afterEach(cleanup)
 
     it('should be able to add items to the basket', async () => {
-        render(<><Header /><ProductDetail {...mockProduct} /></>);        
+        render(
+            <>
+                <Header />
+                <ProductDetail {...mockProduct} />
+            </>
+        )
 
-        const addToCart = screen.getByTestId('add-to-cart');
+        const addToCart = screen.getByTestId('add-to-cart')
 
         fireEvent.click(addToCart)
         const basket = screen.getByTestId('cart-items')
-        
-        waitFor(() => {
-            expect(basket).toHaveTextContent('2') 
-          });        
 
-        // setTimeout(() => {
-        //     expect(basket).toHaveTextContent('2') 
-        // }, 100);
+        waitFor(() => {
+            expect(basket).toHaveTextContent('2')
+        })
+
     })
 })

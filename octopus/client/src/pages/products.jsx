@@ -1,9 +1,7 @@
-import React
-// , { useContext }
- from 'react'
+import React from
+'react'
 import ProductCard from '../components/ProductCard'
 import { Layout, QueryResult } from '../components'
-// import { ProductsContext } from '../productsContext'
 import { useQuery, gql } from '@apollo/client'
 
 const GET_PRODUCTS = gql`
@@ -28,13 +26,9 @@ const GET_PRODUCTS = gql`
 `
 
 const Products = () => {
-    // const { setProducts } = useContext(ProductsContext)
-
     const { loading, error, data } = useQuery(GET_PRODUCTS)
 
     console.log(loading, error)
-    console.log(data?.products)
-    // setProducts([data?.products])
 
     return (
         <Layout>
