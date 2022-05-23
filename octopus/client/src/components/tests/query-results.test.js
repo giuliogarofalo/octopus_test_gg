@@ -16,6 +16,7 @@ describe('Query Result', () => {
     })
 
     it('renders error message', async () => {
+        const { getByText } = render(<QueryResult error={'error'} />)
         getByText(/error/i)
     })
 })
