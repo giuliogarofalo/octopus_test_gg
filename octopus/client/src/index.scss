@@ -1,3 +1,13 @@
+$light-blue: #01193b;
+$dark-blue: #050f2a;
+
+.app-container {
+  max-width: 700px;
+}
+#root {
+  background-color: $light-blue ;
+}
+
 body {
   font-family: 'Gotham',helvetica,arial,sans-serif;
   margin: 0;
