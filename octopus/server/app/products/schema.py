@@ -8,9 +8,14 @@ class ProductNode(DjangoObjectType):
         model = models.Product
         fields = '__all__'
 
-
 class Query(object):
     product = graphene.Field(ProductNode, product_id=graphene.ID())
-
+    
     def resolve_product(self, info, product_id):
         return models.Product.objects.get(id=product_id)
+    
+    products = graphene.List(ProductNode)
+
+    def resolve_products(self, info):
+        return models.Product.objects.all()
+
